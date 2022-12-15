@@ -1,0 +1,20 @@
+site_name: É Foda Bê - Ulduar Guide
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: light blue
+    accent: cyan  
+  features:
+    - navigation.top
+plugins:
+  - search
+  - tags
+
+nav:
+  - Index: index.md
+  - Bosses:
+    - Flame Leviathan: bosses/flame_leviathan.md
+    - Razorscale: bosses/razorscale.md
+  - Hard Mode Bosses:
+    - Flame Leviathan: hm_bosses/flame_leviathan.md

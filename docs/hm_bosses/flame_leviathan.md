@@ -1,7 +1,8 @@
 ---
 tags:
-  - Very Hard
-  - Optional Hard Mode
+  - "Skippable: False"
+  - "Difficult: Very Hard"
+  - "Mode: Hard"
 ---
 
 # Flame Leviathan

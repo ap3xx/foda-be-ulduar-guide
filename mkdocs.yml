@@ -10,6 +10,8 @@ theme:
 plugins:
   - search
   - tags
+markdown_extensions:
+  - admonition
 
 nav:
   - Index: index.md

@@ -1,7 +1,8 @@
 ---
 tags:
-  - Skippable
-  - Easy
+  - "Skippable: True"
+  - "Difficult: Easy"
+  - "Mode: Normal"
 ---
 
 

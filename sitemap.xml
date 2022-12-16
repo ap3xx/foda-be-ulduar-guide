@@ -1,53 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>None</loc>
+         <loc>Nonecredits/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/credits/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/credits/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Noneimportant/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/important/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/important/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>None./</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonehard/flame_leviathan/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/flame_leviathan/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/flame_leviathan/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonehard/xt002/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/xt002/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/xt002/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonenormal/flame_leviathan/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/flame_leviathan/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/flame_leviathan/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonenormal/ignis/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/ignis/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/ignis/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonenormal/razorscale/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/razorscale/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/razorscale/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonenormal/xt002/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/xt002/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/xt002/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>Nonespecial/algalon/</loc>
          <lastmod>2022-12-16</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/special/algalon/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/special/algalon/"/>
+         
     </url>
 </urlset>

@@ -2,10 +2,9 @@
 
 This guide serves as a pre-raid preparation obligatory read.  
 Besides watching some videos, information shown here is __very important__ to be known before steping into the raid.  
+Ulduar is a very high step from Naxxramas and other Phase 1 content, difficulty wise. Preparing yourself and helping other people is a necessary attitude regarding guild success.
 
-Ulduar is a very high step from Naxxramas and other Phase 1 content, difficulty wise. Preparing yourself and helping other raid members is a necessary attitude regarding Raid group success.
-
-## The raid
+## The Raid
 
 ![](./img/ulduar.png)
 

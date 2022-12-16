@@ -7,9 +7,28 @@ theme:
     accent: cyan  
   features:
     - navigation.top
+
 plugins:
   - search
   - tags
+  - i18n:
+      default_language: en
+      languages:
+        en: 
+          name: English
+          build: true
+        pt: 
+          name: "Português"
+          build: true
+      material_alternate: true
+      nav_translations:
+        pt:
+          Introduction: Introdução
+          Important Read: Leitura Importante
+          Special: Especial
+          Credits: C'rreditos
+
+
 markdown_extensions:
   - admonition
 
@@ -27,3 +46,4 @@ nav:
   - Special:
     - "Algalon": special/algalon.md
   - Credits: credits.md
+

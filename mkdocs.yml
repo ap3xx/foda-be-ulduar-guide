@@ -1,4 +1,4 @@
-site_name: É Foda Bê - Ulduar Guide
+site_name: Ulduar Deep Dive - <É Foda Bê>
 theme:
   name: material
   palette:
@@ -14,12 +14,16 @@ markdown_extensions:
   - admonition
 
 nav:
-  - Index: index.md
+  - Introduction: index.md
+  - Important Read: important.md
   - Normal Mode:
     - Flame Leviathan: normal/flame_leviathan.md
     - Razorscale: normal/razorscale.md
     - Ignis the Furnace Master: normal/ignis.md
     - XT-002: normal/xt002.md
   - Hard Mode:
-    - Flame Leviathan: hard/flame_leviathan.md
-    - XT-002: hard/xt002.md
+    - "[HM] Flame Leviathan": hard/flame_leviathan.md
+    - "[HM] XT-002": hard/xt002.md
+  - Special:
+    - "Algalon": special/algalon.md
+  - Credits: credits.md

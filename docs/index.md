@@ -1,37 +1,21 @@
-# Index
-
-## Welcome to this guide!
-
-This was [originally](https://docs.google.com/document/d/1Y-vf4s3fPpHBJnurudGfSJMP13-NKUWoP5iGr8F4XVQ) written by `Bigot/Aenarion` for __&lt;Unlucky&gt;__
-
-## Introduction
+# Introduction
 
 This guide serves as a pre-raid preparation obligatory read.  
-Besides watching some videos, information shown here is __very important__ to be known before steping into the raid.
+Besides watching some videos, information shown here is __very important__ to be known before steping into the raid.  
 
-## Formating guide
+Ulduar is a very high step from Naxxramas and other Phase 1 content, difficulty wise. Preparing yourself and helping other raid members is a necessary attitude regarding Raid group success.
 
-During the guides, we are gonna use specific formatting with specific meanings:
+## The raid
 
-__Bold__: Shit’s dangerous, yo.  
-<ins>Underline</ins>: Shit’s noteworthy for the strat, yo.  
-_Italic_: Shit needs to be read carefully because often misunderstood, yo.  
-Boss does This (_also That?_): This part of the strat is true (_this part must be verified?_)
+![](./img/ulduar.png)
 
-## Commonly used words
+_For millennia, Ulduar has kept itself far from the strife and strife of the mortal races. But since its recent discovery, many have questioned the original purpose of said structure. Some consider it a city built to proclaim the glory of its creators, while others feel it to be a vault containing endless treasures, relics, and even the many powers of the Titans._  
+_But they are wrong: behind these doors there is no city or treasure room, not even a definitive answer to the mysteries of the Titans. All that awaits those who venture into Ulduar is a horror that even the Titans would have destroyed, an evil that even they could not contain..._  
 
-__"The Raid"__ = The 25 Players, or at least the largest stack of Players.  
-__"A Player"__ = Any of the 25 gamers in the Raid.  
-__"NPC"__ = Unless specified otherwise, a hostile one.  
-__"Adds"__ = Unless specified otherwise, hostile ones.  
-__"P1, P2, P3"__ = The specified boss phase.  
-__"The Boss deals damage…"__ = Unless specified otherwise, to his current Tank.  
-__"Raid-Wide"__ = Something that affects all 25 Players unless specified otherwise.  
-__"Enrage"__ = Mechanic that punishes the Players for taking too long, or for failing a mechanic.  
-__"Soft Enrage"__ = One that has some variance rather than being hard capped in minutes.  
-__"Externals"__ = Damage reduction buffs that are not cast by the tank itself (`Divine Sac`, `Pain Supression`, etc).
+<iframe width="800" height="450" src="https://www.youtube.com/embed/xEylX2LJ8c4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Lets start!
+_...Deep within old Ulduar, an ancient god of death whispers... Tread carefully, or this prison will be your tomb._
 
-Use the left menu to select a specific boss.  
-You can also follow the guide natural order by using the navigation system below!
+## Before heading to encounters
+
+Its very important to read [this](./important.md), since it helps understanding some aspects of the guide.

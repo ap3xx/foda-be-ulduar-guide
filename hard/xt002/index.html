@@ -1,0 +1,722 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>XT-002 - É Foda Bê - Ulduar Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hard-mode-xt-002" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="É Foda Bê - Ulduar Guide" class="md-header__button md-logo" aria-label="É Foda Bê - Ulduar Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            É Foda Bê - Ulduar Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              XT-002
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="É Foda Bê - Ulduar Guide" class="md-nav__button md-logo" aria-label="É Foda Bê - Ulduar Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    É Foda Bê - Ulduar Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Normal Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Normal Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Normal Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../normal/flame_leviathan/" class="md-nav__link">
+        Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../normal/razorscale/" class="md-nav__link">
+        Razorscale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../normal/ignis/" class="md-nav__link">
+        Ignis the Furnace Master
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../normal/xt002/" class="md-nav__link">
+        XT-002
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Hard Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hard Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Hard Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flame_leviathan/" class="md-nav__link">
+        Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          XT-002
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        XT-002
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-image-reference" class="md-nav__link">
+    Strategy Image Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-image-reference" class="md-nav__link">
+    Strategy Image Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+      
+        <span class="md-tag">Difficult: Very Hard</span>
+      
+    
+  </nav>
+
+
+
+
+<h1 id="hard-mode-xt-002">Hard Mode XT-002</h1>
+<p><img alt="" src="../../img/hm_xt002.png" /></p>
+<h2 id="overview">Overview</h2>
+<blockquote>
+<p>As mentioned above, this Hard Mode is enabled <strong>if the Heart of the Deconstructor reaches 0 HP</strong>. When that happens, XT is <strong>healed to full</strong> (rather than damaged), increases his total health by 60% and all his Damage by 15%. From that point on, some mechanics of the fight will change.</p>
+<p><ins>It is ideal to kill the Heart by using as few Cooldowns as possible (both DPS individual CDs and Heroism)</ins> as these will be needed for the rest of the fight.</p>
+</blockquote>
+<h2 id="full-mechanics-rundown">Full Mechanics Rundown</h2>
+<ul>
+<li><ins>Both Debuffs will gain an additional new behavior</ins>:<ul>
+<li><strong>Searing Light</strong> when it expires, will instantly <strong>spawn an Add called Life Spark</strong>. This add deals high melee damage and thus needs to be picked up near-instantly by the Tank(s), and is likely to kill the Debuffed Player if not topped to full HP (No matter how good the tank is, the add likely will instantly melee the Player it spawns on).<ul>
+<li>It also deals moderate AoE Nature damage around it.</li>
+<li><strong>Life Sparks are #1 DPS Focus at any moment they exist.</strong></li>
+<li><ins>The Debuffed Player must thus not only move out of the Raid to not kill allies with Searing Light, but also make his way to be ~20yds away from the tank to allow for a very quick taunt.</ins></li>
+</ul>
+</li>
+<li><strong>Gravity Bomb</strong>, on explosion, will not only damage and reel nearby Players in, but also <strong>leave a large void zone that will continuously slow and damage any Players that stand in it. This zone never goes away, and thus must be placed with care</strong>, far from the Raid but close enough for Healers to save the debuffed Players.<ul>
+<li><ins>A preemptive Hand of Freedom will greatly help the debuffed Player by making it immune to the zone’s slow.</ins></li>
+<li>One Paladin can provide enough Hands for every Gravity Bomb.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>XT will never enter Heart Phases again from the moment his Heart is broken (he doesn’t have a Heart anymore to show, duh…). As a consequence, no more Adds will spawn and individual DPS cooldowns may be used whenever they pull off the highest DPS. On the other hand, Healers will not be able to freely fix their mana.</li>
+<li>
+<p>XT will cast Tympanic Tantrum on a fixed timer (1 minute). This is a long, channeled spell that deals insanely high Damage per second to the whole Raid, scaling on their Max HP (200% HP over the duration).</p>
+<ul>
+<li>This is a very demanding mechanic, <ins>for which I will thoroughly detail individual responsibilities in the Essentials below</ins>.</li>
+</ul>
+</li>
+<li>
+<p>When inactive, XT will technically be untargetable and instead plop down another NPC, <ins>his Heart, which takes +100% increased damage and carries over all the damage it takes</ins> to the “real” Boss’ HP.
+<strong>Destroying the Heart enables Hard Mode, so do not be confused if we ask you to stop DPSing.</strong> In the meanwhile he will stop applying Debuffs (though left-overs Debuffs might still continue to be dangerous when Phase2 begins) and instead summon Adds:</p>
+<ul>
+<li><em>Repair Bots</em> will greatly heal him if they reach him, but historically Warmane has failed to script that (lol) so don’t worry, we’ll see if they’re a problem. If they are, they can be crowd controlled, usually by Frost Nova or Elemental Shaman Earthbind.</li>
+<li><strong>Bomb Bots</strong> are fragile and explode for Great damage on death, damaging both Players and nearby Repair Bots alike.</li>
+<li>Pummelers <strong>are strong Tank&amp;Spank Adds</strong> that must be Misdirected to the Tank (possibly an Offtank) and killed when possible. They whirlwind but melees will survive the damage.</li>
+</ul>
+</li>
+<li>
+<p>After a while of Heart damage, Phase1 resumes. _XT begins a Heart Phase every time he loses 25% of his max HP, so Heart Phases can actually chain up very quickly if enough damage is dealt to the Heart__ - making the Normal Mode fight extremely trivial.</p>
+</li>
+</ul>
+<h2 id="strategy-image-reference">Strategy Image Reference</h2>
+<p><img alt="" src="../../img/strats/hm_xt002.png" /></p>
+<h2 id="essentials">Essentials</h2>
+<h3 id="tanks">Tanks</h3>
+<ul>
+<li>All Tanks should weave defensive cooldowns during Tantrum. XT is also punishing to Tanks outside of Tantrums, but Healers will have infinitely less pressure in those moments.</li>
+<li>Paladin Tanks can use Hand of Freedom on Gravity Bombs that are about to expire, and Hand of Protection on debuffed Players if a Tantrum is about to happen (the HoP will prevent Tantrum damage, but not the debuff itself. Taking damage from both is often lethal)</li>
+<li>Druid Tanks can use Barkskin + Tranquility during Tantrums (healing cooldowns will be on rotation) if they make sure they shift to Bear before the Tantrum ends.</li>
+</ul>
+<h3 id="healers">Healers</h3>
+<ul>
+<li>For Tantrums, <ins>all Healers will be assigned to heal a group(1 to 5) and/or to specific targets</ins>. Is it primordial to respect that assignment as closely as possible, as the whole Raid will take very heavy damage and no Player can be left unhealed.</li>
+<li><ins>Searing Light debuffed Players should receive a nonstop heal spam and sniped with a Heal that lands as perfectly as possible to the expiration of the debuff.</ins></li>
+<li>Gravity Bombs must only be topped off + shielded.</li>
+<li>This is a very long fight with extremely high HPS output and mana preservation is paramount. Care should be paid to allow Paladins to Divine Plea and Tide/Hymns of Hope to be efficient.</li>
+<li>Extra-ordinary Healing Cooldowns (DHymn, Tranq) will be assigned.</li>
+<li><strong>Two HPals will alternate Bubble+RaidSac on each Tantrum.</strong></li>
+<li>Hpals will probably be assigned to heal melee groups.</li>
+<li>Resto Druids will probably actually be forbidden to use Tranquility at the profit of their better spells, unless we run 6+ Healers.</li>
+<li>Resto Shamans will likely be assigned to heal Ranged groups (they will be spread, but close enough for ChainHeals)</li>
+<li>Discipline will have to preshield as many Players as he can before Tantrum (ideally 25), then weave shield+PoH and PoM off cooldown. He will PoH his assigned group.</li>
+<li>HolyPriest will have to precast PoM and spam PoH+CoH on his assigned group. Might vary with talents.</li>
+</ul>
+<h3 id="dps">DPS</h3>
+<ul>
+<li><strong>All classes/specs DPS priority</strong>: Life Sparks &gt;&gt;&gt;&gt;&gt; Any leftover Pummelers when Hard Mode begins &gt;&gt;&gt; Boss.</li>
+<li>Healthstones should be saved for situations where a Searing Light is about to kill you or for a Tantrum where the Raid is starting to drop. In general, you’re free to healthstone if you reach 20% hp during a Tantrum or from a Searing Light damage.</li>
+<li><ins>Hitting zero Raid members with your Gravity Bomb is mandatory</ins>. Hitting the least possible Players with your Searing Lights is required, and <strong>you must be in Taunt range of the Tank when your Searing Light debuff expires</strong>.</li>
+<li><strong>List of DPS classes/specs and your job during Tantrums</strong>:<ul>
+<li><ins>Arms/Fury</ins>: Enraged Regeneration and Shieldwall, preferably one per Tantrum and not the one Heroism will be used on.</li>
+<li><ins>Ret</ins>: Might be assigned to DSac rotation. Freely use FoL heal procs on low hp Players. Sacred Shield yourself before Tantrum. Bubble/Shieldwall whenever lacking Forbearance.</li>
+<li><ins>Hunter</ins>: Deterrence shouldn’t help against Tantrum, but check if it does, once. Rather, use Deterrence when Searing Light is about to expire so that the Life Spark ignores you.</li>
+<li><ins>Rogue</ins>: Use Feint on every Tantrum. Do not Cloak of Shadows a Gravity Bomb. Can Cloak of Shadows instantly on Searing Light, assuming the Tank can react accordingly.</li>
+<li><ins>Shadow Priest</ins>: Will be assigned for a DHymn. For all other tantrums, should use PoM when Tantrum begins, and refresh DoTs just before. Might have to also spam PoH, but the push-back from Tantrum will probably make it inefficient.</li>
+<li><ins>Death Knight</ins>: Must Death Strike at least once during the Tantrum and use IBF whenever up during a Tantrum. Save AMS for Searing Lights, as Tantrum is Physical Damage. If Frost, Ghoul+DeathPact whenever you’re not using IBF. If Unholy, be ready to Death Pact if you reach 20% HP.</li>
+<li><ins>Balance</ins>: Will be assigned to a Tranquility (with a Barkskin to avoid pushback). Will Barkskin every Tantrum anyway. Cast heals during the Tantrum, whichever is the highest output that doesn’t get you oom (pre-shotting Lifeblooms right before Tantrum is a good idea). Is allowed to have bad DPS as a consequence.</li>
+<li><ins>Feral</ins>: Will be assigned to a Tranquility (with a Barkskin to avoid pushback). Will Barkskin every Tantrum anyway. Survival Instincts whenever up. Shifting into Bear Form is not mandatory since Cat takes -30% AoE Damage, but can Bear+Frenzied Regen during his Survival Instincts.</li>
+<li><ins>Mage</ins>: Can IceBlock freely on Tantrums, but better saved in case of a bad Searing Light. Obviously never Ice Block a Gravity Bomb and never Ice Block a Searing Light if you’re not in range of the tank and outside the Raid. Always Blink when receiving a Searing Light.</li>
+<li><ins>Warlocks</ins>: Affli should Drain Life during Tantrum and Death Coil during Tantrum whenever up. Demono should save Metamorphosis for Tantrum due to increased Armor and how he’ll be free to run into melee range without fear of debuffs.</li>
+<li><ins>Elemental</ins>: Must spam Chain Heals during the whole Tantrum. The temporary haste from Elemental Mastery will benefit those casts.</li>
+<li><ins>Enhancement</ins>: Must expend Maelstrom procs into Chain Heals (or a nicely sniped Healing Wave) for the whole Tantrum. Can expend incomplete Maelstrom stacks for more heals. Use Shamanistic Rage right before each Tantrum. Use Wolves according to Trinkets/Burst cooldowns rather than just to heal yourself.</li>
+</ul>
+</li>
+</ul>
+<h2 id="special-assignments">Special Assignments</h2>
+<ul>
+<li>Not really any, aside all that’s written above</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../flame_leviathan/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flame Leviathan" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Flame Leviathan
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

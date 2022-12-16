@@ -2,7 +2,6 @@
 tags:
   - "Skippable: False"
   - "Difficult: Very Easy"
-  - "Hard Mode: True"
 ---
 
 # Flame Leviathan
@@ -71,3 +70,7 @@ tags:
 ## Special assignments
 
 None.
+
+## Hard Mode
+
+This boss has a hard mode for the fight. [Click here](../hard/flame_leviathan.md) to check its guide.

@@ -1,5 +1,3 @@
-contributors: Khalmýr-Benediction
-
 # Index
 
 ## Welcome to this guide!
@@ -22,15 +20,16 @@ Boss does This (_also That?_): This part of the strat is true (_this part must b
 
 ## Commonly used words
 
-__“The Raid”__ = The 25 Players, or at least the largest stack of Players.  
-__“A Player”__ = Any of the 25 gamers in the Raid.  
-__“NPC”__ = Unless specified otherwise, a hostile one.  
-__“Adds”__ = Unless specified otherwise, hostile ones.  
-__“The Boss deals damage…”__ = Unless specified otherwise, to his current Tank.  
-__“Raid-Wide”__ = Something that affects all 25 Players unless specified otherwise.  
-__“Enrage”__ = Mechanic that punishes the Players for taking too long, or for failing a mechanic.  
-__“Soft Enrage”__ = One that has some variance rather than being hard capped in minutes.  
-__“Externals”__ = Damage reduction buffs that are not cast by the tank itself (`Divine Sac`, `Pain Supression`, etc).
+__"The Raid"__ = The 25 Players, or at least the largest stack of Players.  
+__"A Player"__ = Any of the 25 gamers in the Raid.  
+__"NPC"__ = Unless specified otherwise, a hostile one.  
+__"Adds"__ = Unless specified otherwise, hostile ones.  
+__"P1, P2, P3"__ = The specified boss phase.  
+__"The Boss deals damage…"__ = Unless specified otherwise, to his current Tank.  
+__"Raid-Wide"__ = Something that affects all 25 Players unless specified otherwise.  
+__"Enrage"__ = Mechanic that punishes the Players for taking too long, or for failing a mechanic.  
+__"Soft Enrage"__ = One that has some variance rather than being hard capped in minutes.  
+__"Externals"__ = Damage reduction buffs that are not cast by the tank itself (`Divine Sac`, `Pain Supression`, etc).
 
 ## Lets start!
 

@@ -15,8 +15,11 @@ markdown_extensions:
 
 nav:
   - Index: index.md
-  - Bosses:
-    - Flame Leviathan: bosses/flame_leviathan.md
-    - Razorscale: bosses/razorscale.md
-  - Hard Mode Bosses:
-    - Flame Leviathan: hm_bosses/flame_leviathan.md
+  - Normal Mode:
+    - Flame Leviathan: normal/flame_leviathan.md
+    - Razorscale: normal/razorscale.md
+    - Ignis the Furnace Master: normal/ignis.md
+    - XT-002: normal/xt002.md
+  - Hard Mode:
+    - Flame Leviathan: hard/flame_leviathan.md
+    - XT-002: hard/xt002.md

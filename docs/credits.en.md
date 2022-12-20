@@ -1,7 +1,7 @@
 # Editor and publisher
 
 * `Khalmýr-Benediction`
-    * __Discord__: icyblood#3986)
+    * __Discord__: icyblood#3986
     * [My Github](https://github.com/ap3xx/)
 
 # Original Document

@@ -1,7 +1,7 @@
 # Editor
 
 * `Khalmýr-Benediction`
-    * __Discord__: icyblood#3986)
+    * __Discord__: icyblood#3986
     * [Meu Github](https://github.com/ap3xx/)
 
 # Documento Original

@@ -16,7 +16,7 @@ tags:
 
 > Slacking between pulls is therefore extremely ill-advised. The fight is fairly short so even one minute can mean the difference between one more pull and having to Raid Off.
 
-> Algalon has two Phases, of which the second is fairly short and somewhat a simplified Phase1. You may not relax and expect less reading than Yogg.
+> Algalon has two Phases, of which the second is fairly short and somewhat a simplified P1. You may not relax and expect less reading than Yogg.
 
 > Algalon is, all in all, a fat gear/performance check, and the burden of the strat is mostly on the Tanks.
 
@@ -30,7 +30,7 @@ tags:
     * <ins>Fixing this damage fast enough to kill enough Stars is the second priority for Healers</ins>.
     * When the Stars die, they also leave <ins>a Black Hole that teleports to the Shadow Realm if stood on</ins>. __Everyone should stay clear of Stars that are currently being killed.__ They wander around but otherwise do not follow anyone.
     * Stars also lose some Health over time and thus cannot be ignored, as they would uncontrollably all explode at once (or too fast, at least).
-    * There can be 3 waves of Collapsing Stars, preferably 2, before Phase2 is enabled.
+    * There can be 3 waves of Collapsing Stars, preferably 2, before P2 is enabled.
 * Algalon will summon <ins>Living Constellations</ins>. Unlike Stars, _these have a normal Threat table and will follow their target_. They do not melee swing but instead regularly cast __Arcane Barrage__ at random Players, dealing moderate damage but enough to be _lethal if combined with a Star Explosion and/or a Cosmic Smash_.
     * The Constellations realistically cannot be DPS’d and should not. <ins>Instead, they disappear when coming in contact with the Black Holes left by the Stars upon death, “closing” the portal therein</ins>. The ground becomes safe again and the Constellation stops damaging the Raid. There are several Constellations and they should be used to close as many Portals as possible, __except one__ (see __Big Bang__ below).
 * Every 90 seconds Algalon will cast __Big Bang__, which does not create life as it should but instead obliterates it. The Raid’s desire to not die should drive them to __enter a Black Hole/Portal to the Shadow Realm before the Big Bang cast is complete__. Be mindful the Portal <ins>should be entered 2-3 seconds before Big Bang is done, rather than later</ins>, or you’ll be locked out from entering. 
@@ -39,11 +39,11 @@ tags:
 * <ins>Shadow Realm</ins>: This is how the Shadow Realm behaves for the whole fight, but obviously this applies mostly to entrances to it due to Big Bang.
     * The Shadow Realm doesn’t really have much to offer. There will be Dark Matter Adds that merely swing at their current threat target - <ins>they aren’t very dangerous but can overwhelm a single, non-Tank Player</ins>.
     * <ins>Leaving the Shadow Realm is automatic after a few seconds</ins>. It does not depend on the completion of the Big Bang. Therefore a Tank (usually the Offtank that was leading the Constellations to the Black Holes) should ensure he jumps in first and early.
-    * __When you leave the Shadow Realm, you will appear on the same spot in the “Main Room” as the one you stood upon in the Shadow Realm__. If that spot is a Black Hole, then off you go to another trip to the Shadow Realm. This is bad and should be avoided by having the general rule of running to the center of the room whenever in the Shadow Realm (assuming there are no Black Holes in the center). This rule will be useful for Phase2.
+    * __When you leave the Shadow Realm, you will appear on the same spot in the “Main Room” as the one you stood upon in the Shadow Realm__. If that spot is a Black Hole, then off you go to another trip to the Shadow Realm. This is bad and should be avoided by having the general rule of running to the center of the room whenever in the Shadow Realm (assuming there are no Black Holes in the center). This rule will be useful for P2.
 
-The fight will usually go like this: Pull -> Stars and Constellations -> Big Bang -> Stars and Constellations -> Big Bang -> Stars and Constellations appear but Phase2 is pushed so Adds are ignored.
+The fight will usually go like this: Pull -> Stars and Constellations -> Big Bang -> Stars and Constellations -> Big Bang -> Stars and Constellations appear but P2 is pushed so Adds are ignored.
 
-Phase2, indeed, is pushed when Algalon reaches 20% HP. When he does, all Black Holes will be closed, and all Stars and Constellations will safely disappear. No more of these will spawn.
+P2, indeed, is pushed when Algalon reaches 20% HP. When he does, all Black Holes will be closed, and all Stars and Constellations will safely disappear. No more of these will spawn.
 
 * __The Raid must move to the center of the room before he is Phased__, as Algalon will also _instantly place 4 stationary Black Holes that cannot be closed_ (having Players on top of them would be bad!). These Black Holes will spawn _Dark Matter Adds_ (same as the ones in Shadow Realm) that can mostly be ignored and offtanked.
 * Algalon will continue to cast __Cosmic Smash__. With the reduced room to maneuver extra caution should be paid to spot them and move out.

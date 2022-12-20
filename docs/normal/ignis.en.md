@@ -43,8 +43,8 @@ tags:
 
 ## Special Assignments
 
-* One DPS will be tasked to deal a large amount of Damage in a single blow on Brittle Adds when they enter the water. Mages or Hunters are good candidates for it, though other classes can apply.
+One DPS will be tasked to deal a large amount of Damage in a single blow on Brittle Adds when they enter the water. Mages or Hunters are good candidates for it, though other classes can apply.
 
 ## Hard Mode
 
-There is no hard mode for Ignis.
+There is no hard mode for this boss.

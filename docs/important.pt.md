@@ -27,7 +27,7 @@ __"Externals"__: Buffs de redução de dano que não são lançados pelo própri
 
 Os chefes podem ter as seguintes tags:
 
-__Skipável__: se True, significa que o boss não é obrigatório para a conclusão da raid.  
+__Pulável__: se Sim, significa que o boss não é obrigatório para a conclusão da raid.  
 __Dificuldade__: existem diferentes níveis de dificuldade, variando de 'Muito Fácil'  a  'Muito Difícil'.  
 
 _Obs: as tags também podem ser usadas para busca_

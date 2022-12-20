@@ -86,10 +86,10 @@ Once Turrets are destroyed you will fall to the ground. You should not be in dan
 
 ## Special Assignments
 
-* Siege Engines: Assigned to a corner or to stick on the Boss.
-* Demolisher: Assigned or not to Catapult their Passengers.
-* Choppers: Assigned to bring Passengers back to their Demolisher, and to each corner.
-* 1 Shaman: Will be assigned to leave his vehicle and Heroism while close enough to the Boss, to help the Turret killers; then back to his vehicle.
+Siege Engines: Assigned to a corner or to stick on the Boss.  
+Demolisher: Assigned or not to Catapult their Passengers.  
+Choppers: Assigned to bring Passengers back to their Demolisher, and to each corner.  
+1 Shaman: Will be assigned to leave his vehicle and Heroism while close enough to the Boss, to help the Turret killers; then back to his vehicle.  
 
 !!! note "Note"
     Due to the high variance of the fight (who gets chased, where do Flame Beams go…) a picture would be mostly pointless.

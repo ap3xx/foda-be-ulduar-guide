@@ -38,11 +38,27 @@ nav:
   - Normal Mode:
     - Flame Leviathan: normal/flame_leviathan.md
     - Razorscale: normal/razorscale.md
-    - Ignis the Furnace Master: normal/ignis.md
+    - Ignis: normal/ignis.md
     - XT-002: normal/xt002.md
+    - Assembly of Iron: normal/council.md
+    - Kologarn: normal/kologarn.md
+    - Auriaya: normal/auriaya.md
+    - Hodir: normal/hodir.md
+    - Thorim: normal/thorim.md
+    - Freya: normal/freya.md
+    - Mimiron: normal/mimiron.md
+    - General Vezax: normal/vezax.md
+    - Yogg-Saron: normal/yogg.md
   - Hard Mode:
     - "[HM] Flame Leviathan": hard/flame_leviathan.md
     - "[HM] XT-002": hard/xt002.md
+    - "[HM] Assembly of Iron": hard/council.md
+    - "[HM] Hodir": hard/hodir.md
+    - "[HM] Thorim": hard/thorim.md
+    - "[HM] Freya": hard/freya.md
+    - "[HM] Mimiron": hard/mimiron.md
+    - "[HM] General Vezax": hard/vezax.md
+    - "[HM] Yogg-Saron": hard/yogg.md
   - Special:
     - "Algalon": special/algalon.md
   - Credits: credits.md

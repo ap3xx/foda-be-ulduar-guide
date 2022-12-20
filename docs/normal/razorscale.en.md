@@ -59,8 +59,8 @@ tags:
 
 ## Special Assignments
 
-* 1 Hunter (or anyone, really) will click the Harpoon Turrets. There is no bad moment to click them, if they’re clickable then they can be clicked with no downside. The only thing that matters is that the last one should be clicked instantly when ready.
+1 Hunter (or anyone, really) will click the Harpoon Turrets. There is no bad moment to click them, if they’re clickable then they can be clicked with no downside. The only thing that matters is that the last one should be clicked instantly when ready.
 
 ## Hard Mode
 
-There is no hard mode for Razorscale.
+There is no hard mode for this boss.

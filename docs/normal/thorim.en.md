@@ -12,7 +12,7 @@ tags:
 
 > Thorim is a two-Phase fight, in which Thorim himself will only be fought in the second Phase.  
 > The first Phase also splits the Raid in <ins>two groups</ins> that will have two very different battles to deal with: They will be referred to as the “Arena” group/room and the “Gauntlet/Tunnel” group/room.  
-> Once the Gauntlet group finishes fighting through a passage that allows them to reach Thorim, dealing any threat to him will cause him to jump down into the Arena, and Phase2 will begin. Gauntlet Players are then also free to jump down to return to the Arena, which is where the pull happens.  
+> Once the Gauntlet group finishes fighting through a passage that allows them to reach Thorim, dealing any threat to him will cause him to jump down into the Arena, and P2 will begin. Gauntlet Players are then also free to jump down to return to the Arena, which is where the pull happens.  
 > Players should mostly be concerned about their survivability.
 
 ## Full Mechanics Rundown
@@ -27,7 +27,7 @@ tags:
     * __Champions__, dangerous Adds that are similar to Razorscale’s Sentinels as they are defined by their deadly __Whirlwind__. They can also Charge targets outside their melee range, making them extremely dangerous and __the #1 DPS Priority__. They can be Disarmed on Warmane.
     * __Warbringers__, melee Adds that deal high tank damage and buff their allies with a passive Aura. Be wary of pulling Threat on them. <ins>May be Mind Controlled to provide that Buff to the Raid Group instead</ins> (and to deal acceptable damage). They do not need to be focused as long as they’re in low numbers and the Tank isn’t overwhelmed.
     * Evokers, who commonly spawn with Warbringers (but combinations with Champions also happen) are _Casters who do not engage in melee_ (and deal low melee damage if silenced). They can disrupt the Arena group greatly by _shielding, damaging, and buffing themselves to be immune to interrupts._ <ins>Offensive dispels and interrupts</ins> are ideal against them, making Enhancement Shaman the perfect pick. They are second in Priority behind Champions.
-    * <ins>Adds will spawn until Phase2 begins</ins>. Therefore, Arena group must survive the war of attrition until Gauntlet group completes their task.
+    * <ins>Adds will spawn until P2 begins</ins>. Therefore, Arena group must survive the war of attrition until Gauntlet group completes their task.
 
 ### P1: Gauntlet
 
@@ -48,7 +48,7 @@ tags:
     * The Mini-Boss will regularly shove around himself for moderate damage+knockback, and will regularly __mark a Player with a rune__ (DBM will mark it as Skull) __that will cause high fire damage around the Player after a delay__ and prevent that Player from moving. As long as Players move out of marked Players, this damage shouldn’t be a problem, but slacking on that movement can overwhelm Healers.
     * Once the Mini-Boss dies, the path further opens to Thorim.
 * The last section has no enemies to kill but instead __will trap Players__ (Not killing them, but incapacitating them for a long while) __that move in the large circles in the center of the path.__ Simply stick to the side walls and no trouble will happen.
-* Thorim is at the end of the path and is targetable. Any hostile action towards him will initiate Phase2. It is recommended to let the Gauntlet group drop down into the Arena and let one last Player hit Thorim before jumping down.
+* Thorim is at the end of the path and is targetable. Any hostile action towards him will initiate P2. It is recommended to let the Gauntlet group drop down into the Arena and let one last Player hit Thorim before jumping down.
 
 ## P2: Thorin
 

@@ -12,7 +12,7 @@ tags:
 
 > The large room where Freya roams (she doesn’t bodypull) has a lot of trash, of which 3 Mini Bosses that will be quickly detailed.  
 > Normal Mode Freya will usually involve killing these 3 Mini Bosses before engaging her.
-> Freya heals herself for massive amounts, decaying over the course of the fight. <ins>DPSing her on pull is utterly useless</ins> and a waste of trinket procs. A fairly unremarkable Phase2 will happen once that healing is removed by dealing with 6 waves of Adds.
+> Freya heals herself for massive amounts, decaying over the course of the fight. <ins>DPSing her on pull is utterly useless</ins> and a waste of trinket procs. A fairly unremarkable P2 will happen once that healing is removed by dealing with 6 waves of Adds.
 
 ## Mini-bosses Rundown
 
@@ -30,7 +30,7 @@ _Note that Freya will be engaging the Tank in melee during the whole fight, but 
 
 * Sunbeam: One of the few spells Freya herself will use. Simply deals AoE damage on a random Player after a short cast. Can’t really be avoided, but rewards spreading.
 * __Eonar’s Gift/Lifebinder’s Gift__: Spawns a small targetable tree NPC. If the tree remains alive for long enough (~15s?), it will massively heal Freya and any Adds present. This is not a hard mechanic, even in Hard Mode: The tree dies easily even to a single Player collapsing on it.
-* Attuned to Nature: As mentioned before, Freya will heal herself constantly. Every wave of Adds that she summons will reduce the healing by 1/6th. She won’t summon Adds after the 6th wave, which is when her healing will be near-nullified. When that happens, a short Phase2 begins.
+* Attuned to Nature: As mentioned before, Freya will heal herself constantly. Every wave of Adds that she summons will reduce the healing by 1/6th. She won’t summon Adds after the 6th wave, which is when her healing will be near-nullified. When that happens, a short P2 begins.
     * These 6 waves of Adds are on a timer, so it is possible to have several waves if the DPS is low, or a large dull empty time if DPS is high. They spawn in a random order, but will always involve three types of waves, happening twice each.
 
 Now, onto the Adds:
@@ -57,7 +57,7 @@ That’s their official name. They’re actually three Adds with roughly the sam
 
 ### P2
 
-Once 6 waves of Adds have been dealt with, Freya will enter Phase2. She will still cast Sunbeams and Lifebinder’s Gifts, but has mostly one last mechanic:
+Once 6 waves of Adds have been dealt with, Freya will enter P2. She will still cast Sunbeams and Lifebinder’s Gifts, but has mostly one last mechanic:
 * Nature Bombs will be dropped <ins>on the Players’ positions</ins>. __After a short delay, they will explode.__ This is easily handled by having the Raid grouped loosely around the same spot; moving a safe distance away whenever bombs are dropped. A good landmark that we’ll use is crossing a river back and forth whenever bombs are dropped.
 When Freya reaches 0 HP, the fight ends.
 

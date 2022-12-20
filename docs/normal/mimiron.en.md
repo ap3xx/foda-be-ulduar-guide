@@ -60,30 +60,30 @@ Additionally, these three parts must be destroyed within 15 seconds of each othe
 
 ### Tanks
 
-* Phase1: Use cooldowns on Plasma Blast and do not facetank __Shock Blast__. Do not trigger __Landmines__ when running from Shock Blast.
-* Phase2: __Avoid Barrages.__
-* Phase3: Pick up all the Adds you can, but <ins>do not cause Bomb Bots to blow people up</ins> if they reach you.
+* P1: Use cooldowns on Plasma Blast and do not facetank __Shock Blast__. Do not trigger __Landmines__ when running from Shock Blast.
+* P2: __Avoid Barrages.__
+* P3: Pick up all the Adds you can, but <ins>do not cause Bomb Bots to blow people up</ins> if they reach you.
     * Use the item dropped by the Assault Bots below the Head if you loot it.
-* Phase4: Do not facetank __Shock Blast__. Do not trigger __Landmines__ when running from Shock Blast. __Avoid Barrages.__
+* P4: Do not facetank __Shock Blast__. Do not trigger __Landmines__ when running from Shock Blast. __Avoid Barrages.__
 
 ### Healers
 
-* Phase1: Stay spread and <ins>prioritize heals on Napalm Shells and Plasma Blasts.</ins>
-* Phase2: __Avoid Barrages__ and pump AoE Heals. Run out of the Rocket landing zones.
-* Phase3: Heal the target of the Head (<ins>your UI should reflect who has threat from something</ins>) and the Tank. Stay out of Bomb Bots and Assault Bots.
-* Phase4: __Avoid Rockets, Barrages__ and heal both the Tank and the Head’s target.
+* P1: Stay spread and <ins>prioritize heals on Napalm Shells and Plasma Blasts.</ins>
+* P2: __Avoid Barrages__ and pump AoE Heals. Run out of the Rocket landing zones.
+* P3: Heal the target of the Head (<ins>your UI should reflect who has threat from something</ins>) and the Tank. Stay out of Bomb Bots and Assault Bots.
+* P4: __Avoid Rockets, Barrages__ and heal both the Tank and the Head’s target.
 
 ### DPS
 
-* Phase1: Do not facetank __Shock Blast__. Do not trigger __Landmines__ when running from Shock Blast. Ranged must stay spread.
-* Phase2: Avoid __Barrage and Rockets.__
-* Phase3: Mind your threat on Bomb Bots and Assault Bots. Ranged can stay on the Head for the whole Phase, (might be up to change for Hard Mode) but multidotting the Assault Bot is welcome.
+* P1: Do not facetank __Shock Blast__. Do not trigger __Landmines__ when running from Shock Blast. Ranged must stay spread.
+* P2: Avoid __Barrage and Rockets.__
+* P3: Mind your threat on Bomb Bots and Assault Bots. Ranged can stay on the Head for the whole Phase, (might be up to change for Hard Mode) but multidotting the Assault Bot is welcome.
     * Use the item dropped by the Assault Bots below the Head if you loot it.
     * <ins>Burst the Head when it’s down on the ground.</ins>
 
 ## Special Assignments
 
-A Ranged DPS (or other) to maintain threat on the Head (Phase 3&4), a specific Player to handle the item dropped by Assault Bots (Phase 3).
+A Ranged DPS (or other) to maintain threat on the Head (P3&4), a specific Player to handle the item dropped by Assault Bots (P3).
 
 ## Hard Mode
 

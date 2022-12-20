@@ -1,8 +1,8 @@
 # Editor
 
-* `Khalmýr-Benediction`
-    * __Discord__: icyblood#3986
-    * [Meu Github](https://github.com/ap3xx/)
+* __Khalmýr/Flavs (&lt;É Foda Bê&gt; @ Benedicion-US)__
+    * __Meu Discord__: `icyblood#3986`
+    * __[Meu Github](https://github.com/ap3xx/)__
 
 # Documento Original
 

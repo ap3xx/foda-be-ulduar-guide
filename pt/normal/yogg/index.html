@@ -1,0 +1,1222 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Yogg-Saron - Ulduar Deep Dive - <É Foda Bê></title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yogg-saron" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../../" title="Ulduar Deep Dive - &lt;É Foda Bê&gt;" class="md-header__button md-logo" aria-label="Ulduar Deep Dive - <É Foda Bê>" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ulduar Deep Dive - <É Foda Bê>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Yogg-Saron
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../normal/yogg/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="pt" class="md-select__link">
+                    Português
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Ulduar Deep Dive - &lt;É Foda Bê&gt;" class="md-nav__button md-logo" aria-label="Ulduar Deep Dive - <É Foda Bê>" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ulduar Deep Dive - <É Foda Bê>
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../important/" class="md-nav__link">
+        Leitura Importante
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Normal Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Normal Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Normal Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flame_leviathan/" class="md-nav__link">
+        Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../razorscale/" class="md-nav__link">
+        Razorscale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ignis/" class="md-nav__link">
+        Ignis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xt002/" class="md-nav__link">
+        XT-002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../council/" class="md-nav__link">
+        Assembly of Iron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kologarn/" class="md-nav__link">
+        Kologarn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auriaya/" class="md-nav__link">
+        Auriaya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hodir/" class="md-nav__link">
+        Hodir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thorim/" class="md-nav__link">
+        Thorim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../freya/" class="md-nav__link">
+        Freya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mimiron/" class="md-nav__link">
+        Mimiron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vezax/" class="md-nav__link">
+        General Vezax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Yogg-Saron
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Yogg-Saron
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Mechanics Rundown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keepers" class="md-nav__link">
+    Keepers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanity" class="md-nav__link">
+    Sanity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p1" class="md-nav__link">
+    P1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2" class="md-nav__link">
+    P2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p3" class="md-nav__link">
+    P3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-image-reference" class="md-nav__link">
+    Strategy Image Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-mode" class="md-nav__link">
+    Hard Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Hard Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hard Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Hard Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/flame_leviathan/" class="md-nav__link">
+        [HM] Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/xt002/" class="md-nav__link">
+        [HM] XT-002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/council/" class="md-nav__link">
+        [HM] Assembly of Iron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/hodir/" class="md-nav__link">
+        [HM] Hodir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/thorim/" class="md-nav__link">
+        [HM] Thorim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/freya/" class="md-nav__link">
+        [HM] Freya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/mimiron/" class="md-nav__link">
+        [HM] Mimiron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/vezax/" class="md-nav__link">
+        [HM] General Vezax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/yogg/" class="md-nav__link">
+        [HM] Yogg-Saron
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Especial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Especial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Especial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special/algalon/" class="md-nav__link">
+        Algalon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        Créditos
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Mechanics Rundown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keepers" class="md-nav__link">
+    Keepers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanity" class="md-nav__link">
+    Sanity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p1" class="md-nav__link">
+    P1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2" class="md-nav__link">
+    P2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p3" class="md-nav__link">
+    P3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-image-reference" class="md-nav__link">
+    Strategy Image Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-mode" class="md-nav__link">
+    Hard Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+      
+        <span class="md-tag">Skippable: False</span>
+      
+    
+      
+      
+        <span class="md-tag">Difficult: Easy</span>
+      
+    
+  </nav>
+
+
+
+
+<h1 id="yogg-saron">Yogg-Saron</h1>
+<p><img alt="" src="../../img/yogg.png" /></p>
+<h2 id="overview">Overview</h2>
+<blockquote>
+<p>Yogg-Saron is a 3-Phase fight</p>
+</blockquote>
+<h2 id="full-mechanics-rundown">Full Mechanics Rundown</h2>
+<h3 id="keepers">Keepers</h3>
+<p>The Keepers of Ulduar (aka Thorim, Hodir, Freya, and Mimiron) are very grateful for breaking Yogg’s mind control on them and will assist the Raid in the encounter with Yogg. They must prealably be talked to, to activate their help. <strong>This cannot be undone.</strong></p>
+<p>Each Keeper provides his own, large Buff to stats on the Players (which never expires), and provides a useful ability to change the fight:</p>
+<ul>
+<li>Mimiron grants +10% Damage dealt and +20% movement speed. He will also massively reduce the casting speed of enemy Adds in Phase2 (will be detailed later)</li>
+<li>Hodir grants +10% Damage dealt and -20% Damage taken. He also will prevent some Player deaths by encasing them in an ice block, saving their life. This has a cooldown and the Player may “/cancelaura Flash Freeze” if he’s safe and wishes to exit the ice block early.</li>
+<li>Thorim grants +10% Damage dealt and +20% max HP. He will also regularly execute Adds in Phase3, that would otherwise be immortal, if they reach low HP.</li>
+<li>Freya will grant +10% Damage dealt and +20% Healing received. She will also enable 4 Sanity Wells in the corners of the room, large green beams that reduce damage dealt while standing in it but restore Sanity.</li>
+</ul>
+<h3 id="sanity">Sanity</h3>
+<p><strong>Sanity is a “resource” that will be displayed in a form of a Debuff on your UI</strong>. <ins>It goes from 100 to 0.</ins> The only direct effect it has is that if you reach 0 Sanity you will be <strong>mind-controlled</strong> by Yogg-Saron, gaining massively increased stats and becoming very mean to your Raid. <strong>The Mind-Control will never be undone including by Battle Rez, Soulstone, and Ankh (So do not do any of these on a previous Mindcontrolled Player/on yourself if mindcontrolled).</strong> It is not necessarily a wipe sentence but shows you fucked up.<br />
+So, back to Freya’s Sanity Wells: Simply stand on it to regenerate 20 sanity every 2 seconds. That’s it. Very fast, safe, and available in all Phases of the fight.<br />
+When a Boss’ mechanics interacts with Sanity it’ll be reminded in the writeup. In general, you can assume the following: All damage that is avoidable in Phase2 and 3 will likely also have a small damage to Sanity.</p>
+<h3 id="p1">P1</h3>
+<p>Yogg will pretend to be Sara. To snap him back to his reasonable self, we have to damage Sara in the middle of the room, but it’s a friendly NPC. What to do?</p>
+<ul>
+<li><strong>Ominous Clouds</strong> will float around the room. Their path isn’t random: They are placed on <em>concentric circles and turn clockwise or counterclockwise</em>. Stepping on a cloud will cause a Guardian of Yogg-Saron to appear after a few seconds. Guardians of Yogg-Saron also spawn over time regardless of Cloud-stepping experiences.</li>
+<li>Guardians of Yogg-Saron do moderate melee damage (clothies beware) and cast <strong>Shadow Volleys</strong> (high damage, and reduce healing recieved) which should always be <ins>interrupted</ins>. <strong>When they die, they also instantly cause a Shadow Nova</strong>, dealing heavy but healable damage (as long as not too many die at the same time). Apparently Silencing the Guardians or Interrupting a Shadow Volley before they die prevents them from doing a Shadow Nova, which is probably an exploit and is not necessary anyway.<ul>
+<li>The Shadow Nova damages Sara (if in range) for 12.5% max HP. So, bring 8 Adds to the middle, kill them here, and Phase2 begins. Sounds great, but:</li>
+</ul>
+</li>
+<li>Sara herself will cast a few spells that might cause trouble:<ul>
+<li><strong>Sara’s Fervor</strong> is a debuff that increases a Player’s Damage by 20% but <strong>causes him to take +100% Damage.</strong> This might be enough to cause the Player to be <strong>one-shot</strong> by a Shadow Nova when an Add dies. The Player should move out of the stacked Raid while ensuring to not step on clouds. Daddy Hodir might save you from the one-shot but this is necessary practice for Hard Mode.</li>
+<li>Sara’s Blessing is a debuff that causes 60K Shadow Damage over 20 seconds. In itself it’s mostly harmless and healable through, <strong>but can stack with Sara’s Fervor, becoming near-lethal damage when added on top of Shadow Novas</strong>. Players should use defensive cooldowns like Anti-Magic Shell or Ice Block if receiving both debuffs.</li>
+<li>Sara’s Anger is used on Guardians of Yogg-Saron rather than Players and increases their melee damage per swing by 12000. Unremarkable.</li>
+</ul>
+</li>
+</ul>
+<h3 id="p2">P2</h3>
+<p><ins>Transition</ins>: The Ominous Clouds will disappear but Adds will remain, usually 1  + 1 extra that is about to spawn. <ins>Simply pull the Raid out of the center and keep killing the Adds the same way.</ins><br />
+Yogg will show up in the center of the room (what once was a large puddle of saronite), pushing Players away if they try staying too close to his godly corpulence. <em>He’s immune to damage in this Phase.</em></p>
+<p>Now, onto Phase2 itself:</p>
+<ul>
+<li>As soon as Phase2 begins, <strong>several Tentacle Adds</strong> will spawn all around the room in random patterns. <em>More Tentacles will also continuously spawn</em> until the Raid manages to push Phase3. <em>They are all stationary.</em> The three types of Tentacles are the following:<ul>
+<li><strong>Corruptor Tentacles</strong> constantly cast <strong>Debuffs</strong> at random Players. All their casts can be <ins>Interrupted</ins>, and Mimiron’s presence causes them to cast 4x slower. There are 4 different debuffs (Curse, Poison, Magic, Disease) and <strong>all should be dispelled as soon as noticed on your UI.</strong> Ranked in order of danger:<ul>
+<li><em>Disease (regularly stuns) &gt; Magic (heavy slow) &gt; Poison (HP/Mana DoT) &gt; Curse (Curse of Doom, 12s duration)</em></li>
+<li>Corruptor Tentacles are the <ins>lowest priority</ins> to be killed among the 3 types.</li>
+</ul>
+</li>
+<li><strong>Crusher Tentacles</strong> reduce the Raid’s Damage by 20% (for each Crusher, can stack) as long as they are not being hit by melee swings. However, they also <strong>can one-shot with their melee swings</strong> (if any Player is in melee range). It is not necessary for melees to risk their lives on the Crushers, <ins>the Ranged DPS can take care of them. All Paladins should be using Judgements on Crusher Tentacles whenever it’s up, as it is classified as a melee attack and will interrupt Diminish Power (the -20% Damage reduction)</ins><ul>
+<li>Crushers are the <ins>second in priority</ins> to be killed.</li>
+</ul>
+</li>
+<li><strong>Constrictor Tentacle</strong> will spawn near a Player and grab it, preventing its movement and causing heavy Physical damage over time. It has fairly low HP and should be <ins>focus-fired instantly when it spawns.</ins><ul>
+<li><em>Immunity effects like Iceblock, Bubble and Hand of Protection should also free the grabbed Player - seemed inconsistent last season.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sara becomes a very attractive Val’kyr, proving Yogg has schizophrenia. She will cast the following spells to disrupt the Raid, ranked from most dangerous to least:<ul>
+<li><strong>Death Ray</strong>: Several lasers firing in semi-random patterns, usually edging towards Players. Two/three ticks are lethal and they tick very fast, thus should be stood away from as much as possible.</li>
+<li><strong>Malady of the Mind</strong>: Cast on a random Player and behaves as a Warlock’s Death Coil. <strong>At the end of the effect, it will bounce to a nearby Player(if any is nearby).</strong> Everyone should be wary of that and move away from any Malady’d Player, which will be marked with Skull by DBM. The Malady deals low damage but reduces Sanity.</li>
+<li><strong>Brain Link</strong>: Two Players will be bound by a link that forces them to go close to each other. If the Players are over 20 yards away from each other they will take damage and lose Sanity. The link will be red if that is the case.</li>
+<li>Psychosis: Random unavoidable damage on a Player, also reducing Sanity.</li>
+</ul>
+</li>
+<li><strong>Induce Madness</strong>: One minute after transition, this mechanic will begin on a cycle.<ul>
+<li>Every time Induce Madness is cast, <ins>10 Portals will open around Yogg</ins>. Their positions are fixed and they will be assigned to Players. <ins>Those Players should be ready in front of their assigned portal before they’re active.</ins></li>
+<li>Clicking on the Portal leads to a <strong>Brain Room</strong>, of which three are possible. The layout changes but the same rules apply:<ul>
+<li>The Players in the Brain Room must move to <ins>eutral NPCs and destroy them</ins>. <strong>They will reflect % of incoming damage</strong>, justifying the presence of a Healer among the 10 Players.</li>
+<li>While doing so, <strong>they must avoid facing</strong>, (their character, not the camera…) as much as possible, <strong>the light-purple laughing skulls</strong>. Facing them causes damage and reduces Sanity.</li>
+<li>Once all NPCs have been destroyed the laughing skulls will be removed and a wall of the room will be removed. Proceed through it to find <strong>the Brain of Yogg-Saron</strong>, which is the actual caster of Induce Madness. The Brain can be damaged, doesn’t fight back in any way, <ins>and all damage done to the Brain will carry over to Yogg himself</ins>. Damaging the Brain is the only way to make Phase3 happen. <ins><em>As long as the Brain is exposed, all Tentacles will be stunned and no more will spawn.</ins></em></li>
+<li>Near the Brain some Portals will allow the trip back to the main room. <strong>Should any Player remain in the Brain Room when Induce Madness completes casting (It’s a 60s cast), they will instantly be lowered to 0 Sanity and be Mind Controlled.</strong> The Brain Room should be left with a generous 2-3 seconds remaining before the end.</li>
+<li>30 seconds after Induce Madness completes, a new Induce Madness will be cast and Portals will open, rinse and repeat.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Once Yogg-Saron reaches 30% HP due to Brain damage (heh), Phase3 begins.</li>
+</ul>
+<h3 id="p3">P3</h3>
+<p>Yogg decides to stop messing about and remembers he’s supposed to be a God of Death and not of Tentacles of Brains, and engages the Raid directly.<br />
+He’s still stationary and will still bump out any Players in him. He does not melee.
+<ins>Leftover Tentacles from Phase2 will not be removed</ins> and should either be dealt with or ignored, at the discretion of the RL.  </p>
+<ul>
+<li>He will cast <strong>Lunatic Gaze</strong> extremely frequently on a fixed cooldown. Anytime Lunatic Gaze is being channeled, <strong>any Player that faces towards Yogg will take damage and lose a large amount of Sanity</strong>, every second. While Lunatic Gaze isn’t being cast, it’s back to normal.</li>
+<li><strong>Immortal Guardians</strong> will spawn very frequently, in various corners of the room, sometimes very close to Players. They deal <strong>high melee damage</strong> (enough to OS a clothie) and should be picked up A.S.A.P. However, they deal less damage (and become smaller) as their %HP is lowered. They will attempt to cast <strong>Drain Life</strong> to heal back up (and even when full HP), which should be <ins>interrupted</ins>.<ul>
+<li>As mentioned earlier, the Immortal Guardians are Immortal, but Uncle Thorim got your back and out-mortals them by <em>finishing them</em> off when they reach 1% HP.</li>
+</ul>
+</li>
+<li>Yogg-Saron will sometimes apply <strong>Shadow Beacon</strong> to a random Immortal Guardian. After a few seconds, the Shadow Beacon, if still alive, will apply a huge Heal over Time to its nearby allies - either other Immortal Guardians or Yogg-Saron. <em>This is not a concern in Normal Mode and will be expanded upon in the Hard Mode section.</em></li>
+</ul>
+<h2 id="strategy-image-reference">Strategy Image Reference</h2>
+<p><img alt="" src="../../img/strats/yogg.png" /></p>
+<h2 id="essentials">Essentials</h2>
+<h3 id="tanks">Tanks</h3>
+<ul>
+<li>P1<ul>
+<li>Pick up Adds and keep them in the center of the room.</li>
+</ul>
+</li>
+<li>P2<ul>
+<li>There’s nothing to Tank! Do your best to <ins>Interrupt</ins> the Corruptors and Judgement the Crushers (if Paladin) and <ins>Dispel</ins>.</li>
+<li>Regenerate Sanity in the Sanity Well if needed.</li>
+</ul>
+</li>
+<li>P3<ul>
+<li>Pick up Adds while facing away from Yogg. Interrupt their Drain Life.</li>
+</ul>
+</li>
+</ul>
+<h3 id="healers">Healers</h3>
+<ul>
+<li>P1<ul>
+<li>Focus heals <ins>on debuffed targets</ins> and patch the Raid to full between each Add dying.</li>
+</ul>
+</li>
+<li>P2<ul>
+<li>Priority: Healing someone who’s about to die literally in the next GCD &gt; <em><strong>Dispels</strong></em> &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Any other kind of Healing.</li>
+<li>Hpals should Judgement Crushers whenever it’s off cooldown.</li>
+<li>Healer assigned to Brain Room (likely Druid or Discipline) must keep moving and blanket the Raid will facing away from skulls.</li>
+<li>Regenerate Sanity in the Sanity Well if needed.</li>
+</ul>
+</li>
+<li>P3<ul>
+<li>Face away from Yogg at all times, as none of your spells require facing an enemy. Focus heals on the Tank, as the Raid should not take any noticeable damage.</li>
+</ul>
+</li>
+</ul>
+<h3 id="dps">DPS</h3>
+<ul>
+<li>P1<ul>
+<li><ins>Interrupt Adds</ins> anytime and stay stacked with the Raid.</li>
+</ul>
+</li>
+<li>P2<ul>
+<li>Ranged on Crushers, Melees on Corruptors with Interrupts. Constrictors instantly become #1 priority when they spawn.</li>
+<li>Brain Room saves cooldowns for the Brain itself and must regenerate their Sanity in the Sanity Well if needed.</li>
+</ul>
+</li>
+<li>P3<ul>
+<li>Melees should cleave Adds and only turn on Yogg-Saron if no Adds remain. Ranged should always be on Yogg-Saron unless Adds start overwhelming the Raid. Neither DPS should be facing Yogg more than 1 tick of Lunatic Gaze. Warlocks and Shadow Priests should turn away whenever channeling a Drain Soul or Mind Flay.</li>
+<li>Regenerate your Sanity in a Sanity Well if needed.</li>
+</ul>
+</li>
+</ul>
+<h2 id="special-assignments">Special Assignments</h2>
+<p>One DPS will be tasked to deal a large amount of Damage in a single blow on Brittle Adds when they enter the water. Mages or Hunters are good candidates for it, though other classes can apply.</p>
+<h2 id="hard-mode">Hard Mode</h2>
+<p>This boss has a hard mode for the fight. <a href="../../hard/yogg/">Click here</a> to check its guide.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Voltar ao topo
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+      
+        
+        <a href="../vezax/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: General Vezax" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              General Vezax
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../hard/flame_leviathan/" class="md-footer__link md-footer__link--next" aria-label="Próximo: [HM] Flame Leviathan" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              [HM] Flame Leviathan
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version.title": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

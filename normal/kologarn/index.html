@@ -1,0 +1,1028 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Kologarn - Ulduar Deep Dive - <É Foda Bê></title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kologarn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ulduar Deep Dive - &lt;É Foda Bê&gt;" class="md-header__button md-logo" aria-label="Ulduar Deep Dive - <É Foda Bê>" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ulduar Deep Dive - <É Foda Bê>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kologarn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../pt/normal/kologarn/" hreflang="pt" class="md-select__link">
+                    Português
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ulduar Deep Dive - &lt;É Foda Bê&gt;" class="md-nav__button md-logo" aria-label="Ulduar Deep Dive - <É Foda Bê>" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ulduar Deep Dive - <É Foda Bê>
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../important/" class="md-nav__link">
+        Important Read
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Normal Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Normal Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Normal Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flame_leviathan/" class="md-nav__link">
+        Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../razorscale/" class="md-nav__link">
+        Razorscale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ignis/" class="md-nav__link">
+        Ignis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xt002/" class="md-nav__link">
+        XT-002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../council/" class="md-nav__link">
+        Assembly of Iron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kologarn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Kologarn
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-mode" class="md-nav__link">
+    Hard Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auriaya/" class="md-nav__link">
+        Auriaya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hodir/" class="md-nav__link">
+        Hodir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thorim/" class="md-nav__link">
+        Thorim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../freya/" class="md-nav__link">
+        Freya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mimiron/" class="md-nav__link">
+        Mimiron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vezax/" class="md-nav__link">
+        General Vezax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yogg/" class="md-nav__link">
+        Yogg-Saron
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Hard Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hard Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Hard Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/flame_leviathan/" class="md-nav__link">
+        [HM] Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/xt002/" class="md-nav__link">
+        [HM] XT-002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/council/" class="md-nav__link">
+        [HM] Assembly of Iron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/hodir/" class="md-nav__link">
+        [HM] Hodir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/thorim/" class="md-nav__link">
+        [HM] Thorim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/freya/" class="md-nav__link">
+        [HM] Freya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/mimiron/" class="md-nav__link">
+        [HM] Mimiron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/vezax/" class="md-nav__link">
+        [HM] General Vezax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/yogg/" class="md-nav__link">
+        [HM] Yogg-Saron
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Special
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Special" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Special
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special/algalon/" class="md-nav__link">
+        Algalon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-mode" class="md-nav__link">
+    Hard Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+      
+        <span class="md-tag">Skippable: False</span>
+      
+    
+      
+      
+        <span class="md-tag">Difficult: Medium</span>
+      
+    
+  </nav>
+
+
+
+
+<h1 id="kologarn">Kologarn</h1>
+<p><img alt="" src="../../img/kologarn.png" /></p>
+<h2 id="overview">Overview</h2>
+<blockquote>
+<p>Kologarn has a chest and two arms. Each of them has a separate HP bar, and his Arms can regrow.<br />
+This fight is simply a coordination check of DPSing the right target among these three options and ensuring Tanks communicate properly.<br />
+The fight ends when Kologarn’s Chest (Will be referred from this point on as “Kologarn”) reaches 0 HP. If an Arm dies, the chest instantly takes half the damage the Arm has suffered before dying (so, 50% of the Arm’s max HP)</p>
+</blockquote>
+<h2 id="full-mechanics-rundown">Full Mechanics Rundown</h2>
+<ul>
+<li>The fight ends when Kologarn’s Chest (Will be referred from this point on as “Kologarn”) reaches 0 HP. <em>If an Arm dies, the chest instantly takes half the damage the arm has suffered before dying</em> (so, 50% of the Arm’s max HP) <strong>but Adds will be spawned on the position of the Arm.</strong> Kologarn will also <em>lose an ability</em> until his Arm has regrown (with full HP):</li>
+<li>His Right Arm’s ability (Note: Since he’s facing you, that’s your left) is <strong>Stone Grip</strong>. The Right Arm grabs 3 random Players, entirely incapacitating them and dealing heavy damage over time. <ins>Dealing enough damage to the Right Arm will free the Players</ins>, and failing to free them will <strong>instantly kill them instead</strong> after a short duration.<ul>
+<li><strong>Right Arm will always be #1 DPS target when it grips someone.</strong></li>
+</ul>
+</li>
+<li>His Left Arm’s ability (Note: Since he’s facing you, that’s your right!) is <strong>Shockwave</strong>. This is simply a heavy, instant Raid-Wide burst of damage (40-70% HP) which causes no problem if Players aren’t taking damage from other mechanics.</li>
+<li>Removing both Arms will disable both these abilities indeed, but will cause Kologarn to shout on the Raid (after all, he can’t attack with his Arms anymore) for heavy Raid-wide damage. <strong>This is generally something we’ll avoid</strong>, even though it’s certainly not an instant wipe.<ul>
+<li><strong>Removing any Arm will cause Rubble (Adds)</strong> to spawn. These are not to be taken lightly: They deal reasonable damage to their target and <strong>heavy AoE damage</strong> around themselves. They should be killed A.S.A.P, <ins>preferably by Ranged DPS</ins>, as Melee DPS might get killed by their AoE.</li>
+</ul>
+</li>
+<li>Kologarn himself has a few abilities that he’ll use independently of his Arms:<ul>
+<li>He’ll <strong>Sunder Armor</strong> his current Tank every now and then, easily solved by a Tank swap. <ins>Tanks should preferably have no stacks when it is decided to kill an Arm</ins>, so that they can safely handle the Rubble Adds.</li>
+<li>He’ll Smash in front of him, dealing low damage to anyone in melee range of him and <ins>Interrupting</ins> them. <ins>All Casters and Healers therefore have to stay out.</ins> (This is apparently the same ability as his Sunder Armor? Must check.)</li>
+<li>He’ll use <strong>Focused Eyebeam</strong> a random Player that is not in his melee range (if everyone is in melee, he’ll do it on a melee instead, and we don’t want that). The Beam deals <strong>heavy damage</strong> (enough to kill when added to other sources of damage) but <ins>can be out-ran if the Player keeps moving</ins>. If the Raid isn’t under pressure, it can be healed through, and defensives (like Iceblock) will work. <strong>The chased Player should be cautious to not bring the Beam into any allies, and to not run into Rubble Adds while running from the Beam.</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="essentials">Essentials</h2>
+<h3 id="tanks">Tanks</h3>
+<ul>
+<li>Communicate to ensure Kologarn’s Tank doesn’t have 3+ stacks of Sunder Armor (preferably swapping at 2 or even less) and the Rubble Adds Tank doesn’t have too many stacks and doesn’t bring Adds into melee range. They should be tanked where they spawn.</li>
+<li>Cooldowns can be used depending on the situation: Sunder Armor stacks, presence of Adds or not, Healers being Stone Gripped...</li>
+</ul>
+<h3 id="healers">Healers</h3>
+<ul>
+<li>Heal <ins>Gripped</ins> Players if you aren’t missing Line of Sight, Focused Beamed Players, Tanks and Melees accordingly to ensure they don’t die to Shockwave damage.</li>
+<li>Rumble Adds deal heavy damage to the Tank, so keep him topped. If Melees are near the Adds, though they shouldn't, be ready to AoE Heal.</li>
+<li>You can self-heal if chased by a Beam, mostly if a HPal since moving is bad for you.</li>
+</ul>
+<h3 id="dps">DPS</h3>
+<ul>
+<li>Listen to the calls for which target to focus DPS on. <strong>Right Arm will always be focused when Players are Stone Gripped, Adds will always be focused whenever they exist.</strong></li>
+<li>Don’t go near Adds unless you’re a Plate and know what you’re doing (def CDs, healthstone…).</li>
+<li>Run away from Focused Beams without crossing other Players or Adds.</li>
+</ul>
+<h2 id="special-assignments">Special Assignments</h2>
+<p>Hunters should have Misdirect+Volley ready when Adds are about to spawn (when an Arm dies).</p>
+<h2 id="hard-mode">Hard Mode</h2>
+<p>There is no hard mode for this boss.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../council/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Assembly of Iron" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Assembly of Iron
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../auriaya/" class="md-footer__link md-footer__link--next" aria-label="Next: Auriaya" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Auriaya
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

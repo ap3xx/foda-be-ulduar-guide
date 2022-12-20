@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Thorim - Ulduar Deep Dive - <É Foda Bê></title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="cyan">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thorim" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ulduar Deep Dive - &lt;É Foda Bê&gt;" class="md-header__button md-logo" aria-label="Ulduar Deep Dive - <É Foda Bê>" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ulduar Deep Dive - <É Foda Bê>
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Thorim
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../pt/normal/thorim/" hreflang="pt" class="md-select__link">
+                    Português
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ulduar Deep Dive - &lt;É Foda Bê&gt;" class="md-nav__button md-logo" aria-label="Ulduar Deep Dive - <É Foda Bê>" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ulduar Deep Dive - <É Foda Bê>
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../important/" class="md-nav__link">
+        Important Read
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Normal Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Normal Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Normal Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flame_leviathan/" class="md-nav__link">
+        Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../razorscale/" class="md-nav__link">
+        Razorscale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ignis/" class="md-nav__link">
+        Ignis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xt002/" class="md-nav__link">
+        XT-002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../council/" class="md-nav__link">
+        Assembly of Iron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kologarn/" class="md-nav__link">
+        Kologarn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auriaya/" class="md-nav__link">
+        Auriaya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hodir/" class="md-nav__link">
+        Hodir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Thorim
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Thorim
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Mechanics Rundown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p1-arena" class="md-nav__link">
+    P1: Arena
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p1-gauntlet" class="md-nav__link">
+    P1: Gauntlet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2-thorin" class="md-nav__link">
+    P2: Thorin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-mode" class="md-nav__link">
+    Hard Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../freya/" class="md-nav__link">
+        Freya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mimiron/" class="md-nav__link">
+        Mimiron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vezax/" class="md-nav__link">
+        General Vezax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yogg/" class="md-nav__link">
+        Yogg-Saron
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Hard Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hard Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Hard Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/flame_leviathan/" class="md-nav__link">
+        [HM] Flame Leviathan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/xt002/" class="md-nav__link">
+        [HM] XT-002
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/council/" class="md-nav__link">
+        [HM] Assembly of Iron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/hodir/" class="md-nav__link">
+        [HM] Hodir
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/thorim/" class="md-nav__link">
+        [HM] Thorim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/freya/" class="md-nav__link">
+        [HM] Freya
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/mimiron/" class="md-nav__link">
+        [HM] Mimiron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/vezax/" class="md-nav__link">
+        [HM] General Vezax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hard/yogg/" class="md-nav__link">
+        [HM] Yogg-Saron
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Special
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Special" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Special
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special/algalon/" class="md-nav__link">
+        Algalon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-mechanics-rundown" class="md-nav__link">
+    Full Mechanics Rundown
+  </a>
+  
+    <nav class="md-nav" aria-label="Full Mechanics Rundown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p1-arena" class="md-nav__link">
+    P1: Arena
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p1-gauntlet" class="md-nav__link">
+    P1: Gauntlet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2-thorin" class="md-nav__link">
+    P2: Thorin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tanks" class="md-nav__link">
+    Tanks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#healers" class="md-nav__link">
+    Healers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dps" class="md-nav__link">
+    DPS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-assignments" class="md-nav__link">
+    Special Assignments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-mode" class="md-nav__link">
+    Hard Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+  <nav class="md-tags" >
+    
+      
+      
+        <span class="md-tag">Skippable: False</span>
+      
+    
+      
+      
+        <span class="md-tag">Difficult: Medium</span>
+      
+    
+  </nav>
+
+
+
+
+<h1 id="thorim">Thorim</h1>
+<p><img alt="" src="../../img/thorim.png" /></p>
+<h2 id="overview">Overview</h2>
+<blockquote>
+<p>Thorim is a two-Phase fight, in which Thorim himself will only be fought in the second Phase.<br />
+The first Phase also splits the Raid in <ins>two groups</ins> that will have two very different battles to deal with: They will be referred to as the “Arena” group/room and the “Gauntlet/Tunnel” group/room.<br />
+Once the Gauntlet group finishes fighting through a passage that allows them to reach Thorim, dealing any threat to him will cause him to jump down into the Arena, and Phase2 will begin. Gauntlet Players are then also free to jump down to return to the Arena, which is where the pull happens.<br />
+Players should mostly be concerned about their survivability.</p>
+</blockquote>
+<h2 id="full-mechanics-rundown">Full Mechanics Rundown</h2>
+<h3 id="p1-arena">P1: Arena</h3>
+<ul>
+<li>Quite a few Adds will be present before the pull happens. They must be killed to proceed, and the timer for the fight actually only starts once they’re dead and Thorim gets pissed. These Adds aren’t very threatening or special, aside from <strong>a giant worm that needs to be faced away from the Raid.</strong></li>
+<li>Players that are assigned to remain in the Arena should do a loose spread whenever possible, as Thorim will regularly stun a Player (unavoidable), and cause that Player plus anyone nearby to take Nature damage and increasing their spell casting time by 75% (for that reason, Arena will mostly be Melee DPS and Hunters).</li>
+<li>Spreading against this mechanic isn’t easy, as the pillars around the arena will sometimes activate and spout lightning at Players that have moved towards them. Moving away from the source of the lightning will simply fix the problem, and the damage shouldn’t cause a death if reacted to.</li>
+<li>Adds will regularly spawn and enter the Arena. There are four types of them:<ul>
+<li>Commoners, a swarm of fairly weak Adds. They interrupt their target, so the Tank should ensure Healers do not pull threat off them.</li>
+<li><strong>Champions</strong>, dangerous Adds that are similar to Razorscale’s Sentinels as they are defined by their deadly <strong>Whirlwind</strong>. They can also Charge targets outside their melee range, making them extremely dangerous and <strong>the #1 DPS Priority</strong>. They can be Disarmed on Warmane.</li>
+<li><strong>Warbringers</strong>, melee Adds that deal high tank damage and buff their allies with a passive Aura. Be wary of pulling Threat on them. <ins>May be Mind Controlled to provide that Buff to the Raid Group instead</ins> (and to deal acceptable damage). They do not need to be focused as long as they’re in low numbers and the Tank isn’t overwhelmed.</li>
+<li>Evokers, who commonly spawn with Warbringers (but combinations with Champions also happen) are <em>Casters who do not engage in melee</em> (and deal low melee damage if silenced). They can disrupt the Arena group greatly by <em>shielding, damaging, and buffing themselves to be immune to interrupts.</em> <ins>Offensive dispels and interrupts</ins> are ideal against them, making Enhancement Shaman the perfect pick. They are second in Priority behind Champions.</li>
+<li><ins>Adds will spawn until Phase2 begins</ins>. Therefore, Arena group must survive the war of attrition until Gauntlet group completes their task.</li>
+</ul>
+</li>
+</ul>
+<h3 id="p1-gauntlet">P1: Gauntlet</h3>
+<ul>
+<li>Once the starting Adds are dead, a <ins>Lever will become clickable</ins> to the left of the Arena. Maintaining the “cast” to open it will open the door to the Gauntlet.</li>
+<li>The first part of the Gauntlet will contain Adds and a Mini-Boss at the back of the room. This mini-Boss will blast the room with a <strong>forward-moving fire AoE. He may blast either half of the room (left or right), and chooses between the two halves randomly.</strong> The Gauntlet group should be wary of that and constantly move to whichever half of the room is safe.<ul>
+<li>Getting hit by the AoE should not be a one-shot but is still heavy damage that can get out of control. It seems getting hit by the AoE while edging in the center of the room also causes double damage (likely killing the Player). Fire Aura Mastery and DSacs are useful here.</li>
+<li>Those AOEs cease when the Mini-Boss is engaged in combat (<strong>though he will complete his last AoE before starting to fight</strong>).</li>
+<li><strong>The Iron Ring Guards</strong> (Adds) on the path to the Mini-Boss deal <strong>heavy damage to the Tank</strong> and can stun him (causing even further damage by preventing him to dodge/parry), and apply a heavy <strong>Bleed effect that must be healed to 100% HP to be removed.</strong> Hand of Sacrifice is very much worth it, as are other externals and tank cooldowns. The Guards also <strong>Cleave</strong> for heavy damage and should be <ins>faced away from the Raid even when moving away from AoEs.</ins></li>
+<li>An <strong>Acolyte</strong> will also assist the Guards with heals and Smites, and <ins>should be killed first</ins>. He may cast a powerful Renew on himself or the Guards which must be <ins>Dispelled</ins>.</li>
+<li>Mini-Boss(Runic Colossus), once engaged, has a few rules which the Gauntlet group must follow:<ul>
+<li>All Players <ins>must be in melee range</ins>, lest the Mini-Boss will Charge them repeatedly;</li>
+<li>All Players <ins>should be behind him</ins>;</li>
+<li>At 50% HP, he’ll shield himself, taking reduced damage and reflecting (some) of the incoming Physical damage. Attention is required for any dual-wielders in here.</li>
+<li>Once the Mini-Boss dies, the path behind him will open.  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The second section involves moving upstairs. There will be more Acolytes (<ins>to kick, dispel, and focus</ins>) and <strong>Iron Honor Guards</strong> who deal less Tank damage but still Cleave hard, and Hamstring the Tank to slow the progression (easily fixed by two rotating Hands of Freedom, usually ProtPal + HPal).<ul>
+<li>As soon as the group sets foot on the first stair, <strong>Iron Honor Guards will regularly spawn from upstairs</strong>, right below the second Mini-Boss. These respawns aren’t overwhelming but might be a problem if the Mini-Boss is engaged right after a respawn.</li>
+<li>On pull, the <strong>Mini-Boss(Ancient Rune Giant)</strong> will greatly buff any remaining Adds (Acolytes and Honor Guards). This isn’t a death sentence if 1-2 Adds remain but will roughen up the fight. <ins>Buffed Adds should definitely be disposed of before moving onto the Mini-Boss himself.</ins></li>
+<li>The Mini-Boss will regularly shove around himself for moderate damage+knockback, and will regularly <strong>mark a Player with a rune</strong> (DBM will mark it as Skull) <strong>that will cause high fire damage around the Player after a delay</strong> and prevent that Player from moving. As long as Players move out of marked Players, this damage shouldn’t be a problem, but slacking on that movement can overwhelm Healers.</li>
+<li>Once the Mini-Boss dies, the path further opens to Thorim.</li>
+</ul>
+</li>
+<li>The last section has no enemies to kill but instead <strong>will trap Players</strong> (Not killing them, but incapacitating them for a long while) <strong>that move in the large circles in the center of the path.</strong> Simply stick to the side walls and no trouble will happen.</li>
+<li>Thorim is at the end of the path and is targetable. Any hostile action towards him will initiate Phase2. It is recommended to let the Gauntlet group drop down into the Arena and let one last Player hit Thorim before jumping down.</li>
+</ul>
+<h2 id="p2-thorin">P2: Thorin</h2>
+<ul>
+<li>Thorim doesn’t swing very hard but still features a soft-enrage mechanic where he builds up attack speed and damage dealt over the minutes he remains alive. He also has a hard enrage which should not be reached in Normal Mode as he also has reduced health. Tanks should save cooldowns for later.</li>
+<li>Speaking of swings, he will regularly do an <strong>Unbalancing Strike</strong> at the Tank, dealing moderate damage (scaling with how much soft-enraged he is) and massively debuffing the Tank’s Defense. <ins>Regular Tank swaps will fix it</ins>, as this debuff doesn’t stack and is shorter than the frequency at which he performs this move.</li>
+<li>Regularly, the pillars around the edge of the Arena will <strong>light up and create a thin strand of lightning towards Thorim</strong> (Who should be tanked in the middle of the room, but for clarity, know it’ll be linked to Thorim). This thread doesn’t deal damage by itself but should be <strong>moved out of A.S.A.P: After a few seconds, Thorim will blast lightning in the direction of the thread, dealing massive damage to anyone still remaining in the direction. This is a large cone, much larger than the strand of lightning that indicates the upcoming damage. It can one-shot</strong> depending on your spec and Thorim’s soft enrage. In Hard Mode it will one-shot nearly always, so practice dodging it.</li>
+<li>Thorim also regularly casts <strong>Chain Lightning</strong>, which ramps up with bounces rather than ramping down. Ranged Players will be in several groups of 2, possibly 3, and Melee DPS will be split in 3 different groups (not counting the Tank group). <strong>This is a significant danger that can one-shot Players, not a healing check.</strong> You must work on your positioning, even in Normal Mode, to never create chains that can one-shot other Players.</li>
+</ul>
+<h2 id="essentials">Essentials</h2>
+<h3 id="tanks">Tanks</h3>
+<ul>
+<li>Arena Tank: No cooldowns required unless overwhelmed, the focus is on <ins>hreat generation.</ins></li>
+<li>Gauntlet Tank: use cooldowns for the first few pulls, the rest is easier. <strong>Face the first Mini-Boss away</strong>, towards the door behind him.</li>
+<li>Thorim: Stay stacked with other Tanks and taunt swap when Unbalancing Strike lands. Save cooldowns for execute (where Thorim will be more soft-enraged).</li>
+</ul>
+<h3 id="healers">Healers</h3>
+<ul>
+<li>Arena: Do a slight spread, move away from lightning sources, and try to keep your threat low.</li>
+<li>Gauntlet: pump heals and externals on the first 2 packs. Move left and right to avoid the fire AoEs. Move into melee range of the first Mini-Boss.</li>
+<li>Thorim: Respect the positioning for Chain Lightnings, <strong>move out of Lightning Charges (the fine threads on the ground).</strong></li>
+</ul>
+<h3 id="dps">DPS</h3>
+<ul>
+<li>Arena: Respect the <ins>priority order</ins> and watch your threat. <ins>Dispel and interrupt the Evokers</ins> if your class allows it. </ins>Stay away from Champions if they cannot be bursted before Whirlwind.<ins>
+Gauntlet: <strong>Never be in front of “physical” mobs</strong> (Guards, Honor Guards) and </ins>focus+dispel+interrupt Acolytes. Move left and right to avoid the fire AoEs. Move into melee range of  the first Mini-Boss.<ins> Stay spread on the second Mini-Boss.
+Thorim: Respect the positioning for Chain Lightnings, <strong>move out of Lightning Charges (the fine threads on the ground).</strong></li>
+</ul>
+<h2 id="special-assignments">Special Assignments</h2>
+<p>Heavily depends on the makeup of the Raid. Lots of options are possible to separate the Players in the two groups.</p>
+<h2 id="hard-mode">Hard Mode</h2>
+<p>This boss has a hard mode for the fight. <a href="../../hard/thorim/">Click here</a> to check its guide.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../hodir/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hodir" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Hodir
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../freya/" class="md-footer__link md-footer__link--next" aria-label="Next: Freya" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Freya
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>Nonecredits/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/credits/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/credits/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
          <loc>Noneimportant/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/important/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/important/"/>
@@ -18,63 +18,191 @@
     </url>
     <url>
          <loc>None./</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/"/>
          
     </url>
     <url>
+         <loc>Nonehard/council/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/council/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/council/"/>
+         
+    </url>
+    <url>
          <loc>Nonehard/flame_leviathan/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/flame_leviathan/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/flame_leviathan/"/>
          
     </url>
     <url>
+         <loc>Nonehard/freya/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/freya/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/freya/"/>
+         
+    </url>
+    <url>
+         <loc>Nonehard/hodir/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/hodir/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/hodir/"/>
+         
+    </url>
+    <url>
+         <loc>Nonehard/mimiron/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/mimiron/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/mimiron/"/>
+         
+    </url>
+    <url>
+         <loc>Nonehard/thorim/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/thorim/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/thorim/"/>
+         
+    </url>
+    <url>
+         <loc>Nonehard/vezax/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/vezax/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/vezax/"/>
+         
+    </url>
+    <url>
          <loc>Nonehard/xt002/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/xt002/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/xt002/"/>
          
     </url>
     <url>
+         <loc>Nonehard/yogg/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hard/yogg/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/hard/yogg/"/>
+         
+    </url>
+    <url>
+         <loc>Nonenormal/auriaya/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/auriaya/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/auriaya/"/>
+         
+    </url>
+    <url>
+         <loc>Nonenormal/council/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/council/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/council/"/>
+         
+    </url>
+    <url>
          <loc>Nonenormal/flame_leviathan/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/flame_leviathan/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/flame_leviathan/"/>
          
     </url>
     <url>
+         <loc>Nonenormal/freya/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/freya/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/freya/"/>
+         
+    </url>
+    <url>
+         <loc>Nonenormal/hodir/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/hodir/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/hodir/"/>
+         
+    </url>
+    <url>
          <loc>Nonenormal/ignis/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/ignis/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/ignis/"/>
          
     </url>
     <url>
+         <loc>Nonenormal/kologarn/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/kologarn/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/kologarn/"/>
+         
+    </url>
+    <url>
+         <loc>Nonenormal/mimiron/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/mimiron/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/mimiron/"/>
+         
+    </url>
+    <url>
          <loc>Nonenormal/razorscale/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/razorscale/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/razorscale/"/>
          
     </url>
     <url>
+         <loc>Nonenormal/thorim/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/thorim/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/thorim/"/>
+         
+    </url>
+    <url>
+         <loc>Nonenormal/vezax/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/vezax/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/vezax/"/>
+         
+    </url>
+    <url>
          <loc>Nonenormal/xt002/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/xt002/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/xt002/"/>
          
     </url>
     <url>
+         <loc>Nonenormal/yogg/</loc>
+         <lastmod>2022-12-20</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="Noneen/normal/yogg/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="Nonept/normal/yogg/"/>
+         
+    </url>
+    <url>
          <loc>Nonespecial/algalon/</loc>
-         <lastmod>2022-12-16</lastmod>
+         <lastmod>2022-12-20</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="Noneen/special/algalon/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="Nonept/special/algalon/"/>
